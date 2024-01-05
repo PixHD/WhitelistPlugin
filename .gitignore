@@ -1,0 +1,11 @@
+
+target/classes/plugin.yml
+target/classes/de/PixHD/WhitelistPlugin/WhitelistPlugin.class
+target/original-WhitelistPlugin-1.0-SNAPSHOT.jar
+target/WhitelistPlugin-1.0-SNAPSHOT.jar
+target/WhitelistPlugin-1.0-SNAPSHOT-shaded.jar
+target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+target/maven-archiver/pom.properties
+target/classes/de/PixHD/WhitelistPlugin/DiscordBot/EventListener/MessageListener.class
+target/classes/de/PixHD/WhitelistPlugin/Config/ConfigManager.class
