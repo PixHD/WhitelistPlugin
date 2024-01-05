@@ -8,6 +8,7 @@ import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.utils.cache.CacheFlag;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -66,6 +67,11 @@ public class WhitelistPlugin extends JavaPlugin {
 
     public static String getPluginName() {
         return PLUGIN_NAME;
+    }
+
+    public static void addPlayerToWhitelist(String playerName) {
+        OfflinePlayer player = Bukkit.getOfflinePlayer(playerName);
+        player.setWhitelisted(true);
     }
 
 

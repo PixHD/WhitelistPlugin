@@ -10,6 +10,7 @@ import java.io.IOException;
 public class ConfigManager {
 
     private final String TOKEN_VALUE = "discordBotToken";
+    private final String CHANNEL_ID = "channelID";
 
     private String name;
     private File file;
@@ -30,10 +31,25 @@ public class ConfigManager {
             }
         }else {
             fileConfiguration.set(TOKEN_VALUE, "exampleToken");
+            fileConfiguration.set(CHANNEL_ID, "exampleID");
             saveFile();
             return false;
         }
         throw new Exception("The Discord Bot Token is not set in the Config File - Located in /plugins/" + WhitelistPlugin.getPluginName() + "/config.yml");
+    }
+
+    public String getChannelID() throws Exception {
+        if(isTokenSet()) {
+            String token = fileConfiguration.getString(CHANNEL_ID);
+            assert token != null;
+            if(token.equalsIgnoreCase("exampleID")) {
+                throw new Exception("The Discord ChannelID is not set in the Config File - Located in /plugins/" + WhitelistPlugin.getPluginName() + "/config.yml");
+            }else {
+                return token;
+            }
+        }else {
+            throw new Exception("The Discord ChannelID is not set in the Config File - Located in /plugins/" + WhitelistPlugin.getPluginName() + "/config.yml");
+        }
     }
 
     public String getToken() throws Exception {
