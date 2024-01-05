@@ -1,0 +1,7 @@
+main: de.PixHD.WhitelistPlugin.WhitelistPlugin
+version: 1.0.0
+name: WhitelistPlugin
+author: PixHD
+description: Makes a Discord Bot for Whitelisting People on your Minecraft Server
+url: https://github.com/pixhd
+commands:
